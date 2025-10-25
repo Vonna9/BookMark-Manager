@@ -2,6 +2,7 @@
 // Get the bookmarks and display them in the popup
 chrome.bookmarks.getTree((tree) => {
   const bookmarkList = document.getElementById("bookmarkList");
+  bookmarkList.innerHTML = "";
   displayBookmarks(tree[0].children, bookmarkList);
 });
 
